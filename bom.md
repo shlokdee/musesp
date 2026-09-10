@@ -8,3 +8,5 @@
 | **TP4056 1A Li-Ion Charger (Mini USB)** | Onboard 1A linear charging module with DW01 IC for over-charge, over-discharge, and short-circuit protection. | 1 | ₹38 | ₹38 | [Robu.in Link](https://robu.in/product/tp4056-1a-li-ion-lithium-battery-charging-module-with-current-protection-mini-usb/) |
 | **SPDT Mini Slide Switch** | Physical hard toggle switch between battery positive rail and boost converter for total system shutdown. | 1 | ₹12 | ₹12 | [Robu.in Link](https://robu.in/product-tag/slide-switch/) |
 | **Total Hardware Cost** | **Complete Portable Hi-Fi Player Hardware BOM** | 11 | — | **₹2472** | — |
+
+INR 2472 = 26 USD
