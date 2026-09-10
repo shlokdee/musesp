@@ -3,6 +3,9 @@
 **Musesp** is an open-source, ultra-portable Digital Audio Player (DAP) built on the ESP32-S3 microcontroller. It delivers high-resolution, uncompressed audio playback (FLAC/WAV) via an I2S DAC, featuring a 2.4" TFT graphical user interface and an isolated 3.0A power delivery system for low-noise audio performance.
 
 ---
+### Inspiration
+* Smartphones have thrown distraction free music listening out of the window, and i would like to bring it back into my life. I could've bought a ready made dap, but where is the fun in that. I have taken inspiration from various ipod restoration channels on youtube, but i wanna do it full DIY in my case.
+---
 
 ## Technical Features
 
