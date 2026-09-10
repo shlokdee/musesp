@@ -25,6 +25,8 @@
 | **SPDT Mini Slide Switch** | Physical hard toggle switch between battery positive rail and boost converter for total system shutdown. | 1 | ₹12 | ₹12 | [Robu.in Link](https://robu.in/product-tag/slide-switch/) |
 | **Total Hardware Cost** | **Complete Portable Hi-Fi Player Hardware BOM** | 11 | — | **₹2472** | — |
 
+INR 2472 = 26 USD
+
 ---
 
 ## Enclosure & Physical Validation Roadmap
