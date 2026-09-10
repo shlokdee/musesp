@@ -38,7 +38,8 @@ The enclosure will be 3D printed.
 To ensure all components fit properly, and im using the right components, i will be designing and printing the case after completing a breadboard prototype.
 
 ---
-
+<img width="947" height="528" alt="image" src="https://github.com/user-attachments/assets/f96f1859-548e-44a5-8ff3-06e661378bc4" />
+This is the basic layout, obviously subject to change after the first batch of hardware arrives and i actually tinker with it.
 
 ## Milestones & Development Phases
 
