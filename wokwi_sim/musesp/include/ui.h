@@ -1,34 +1,10 @@
-#include <SPI.h>
-#include "FS.h"
-#include <Adafruit_GFX.h>
-#include <Adafruit_ILI9341.h>
-//#include <SdFat.h>
-//#include <Adafruit_ImageReader.h>
-//#include <ui.h>
-
-// ESP32-S3 to ILI9341 wiring in this project
-#define TFT_CS 5
-#define TFT_DC 15
-#define TFT_SCK 18
-#define TFT_MISO 16
-#define TFT_MOSI 17
-
-#define SD_CS 10
-
-
-//SdFat                SD;
-//Adafruit_ImageReader reader(SD);
-Adafruit_ILI9341 tft(TFT_CS, TFT_DC, -1);
-
-
-// [BEGIN lopaka generated]
 static const unsigned char PROGMEM fr[] = {0xc0,0x03,0xf8,0x03,0xfe,0x03,0xff,0x83,0xff,0xe3,0xff,0xf3,0xff,0xfb,0xff,0xff,0xff,0xff,0xff,0xfb,0xff,0xf3,0xff,0xe3,0xff,0x83,0xfe,0x03,0xf8,0x03,0xc0,0x03};
 
 static const unsigned char PROGMEM fl[] = {0xc0,0x03,0xc0,0x1f,0xc0,0x7f,0xc1,0xff,0xc7,0xff,0xcf,0xff,0xdf,0xff,0xff,0xff,0xff,0xff,0xdf,0xff,0xcf,0xff,0xc7,0xff,0xc1,0xff,0xc0,0x7f,0xc0,0x1f,0xc0,0x03};
 
 static const unsigned char PROGMEM play[] = {0xc0,0x00,0xe0,0x00,0xf8,0x00,0xff,0x00,0xff,0xc0,0xff,0xe0,0xff,0xf8,0xff,0xff,0xff,0xff,0xff,0xf8,0xff,0xe0,0xff,0xc0,0xff,0x00,0xf8,0x00,0xe0,0x00,0xc0,0x00};
 int seeklen=0;
-void drawScreen_landscape(void) {
+void drawScreen_landscape(Adafruit_ILI9341 tft, String title, String artist) {
     tft.setRotation(1);
     tft.fillScreen(0x0);
     // rect 1
@@ -38,11 +14,11 @@ void drawScreen_landscape(void) {
     tft.setTextSize(2);
     tft.setTextWrap(false);
     tft.setCursor(20, 186);
-    tft.print("Mr Brightside");
+    tft.print(title);
     // string 3
     tft.setTextSize(1);
     tft.setCursor(25, 213);
-    tft.print("The Killers");
+    tft.print(artist);
     // paint 5
     tft.drawBitmap(208, 209, fl, 16, 16, 0xFFFF);
     // paint 5
@@ -67,43 +43,4 @@ void drawScreen_landscape(void) {
     tft.drawLine(200, 120, 299, 120, 0xFFFF);
     // line 11
     tft.drawLine(200, 140, 299, 140, 0xFFFF);
-}
-// [END lopaka generated]
-
-
-
-void setup() {
-  Serial.begin(115200);
-  delay(100);
-
-  // Explicitly select the SPI pins used by the circuit.
-  SPI.begin(TFT_SCK, TFT_MISO, TFT_MOSI, TFT_CS);
-  pinMode(TFT_CS, OUTPUT);
-  pinMode(TFT_DC, OUTPUT);
-
-  tft.begin();
-
-/*
-  if (!SD.begin(SD_CS, SD_SCK_MHZ(10))) {
-    Serial.println(F("SD begin() failed"));
-    for (;;);
-  }
-    Serial.println("SD Card initialized.");
-    */
-/*
-    tft.fillScreen(ILI9341_BLUE);
-  tft.setRotation(3);
-
-  ImageReturnCode stat = reader.drawBMP("/wokwi.bmp", tft, 0, 0);
-  reader.printStatus(stat);
-*/
-drawScreen_landscape();
-
-
-}
-
-void loop(void) {
-  tft.fillRect(202, 188, seeklen, 11, 0xFFFF);
-  delay(100);
-  seeklen+=1;
 }

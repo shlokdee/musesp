@@ -1,0 +1,78 @@
+#include "SdFat.h"
+
+#define SPI_SPEED SD_SCK_MHZ(4)
+#define CS_PIN 10
+
+SdFat sd;
+
+void readRealMP3Metadata(const char* filepath) {
+  SdFile file;
+
+  if (!file.open(filepath, O_READ)) {
+    Serial.print("File not found on SD: ");
+    Serial.println(filepath);
+    return;
+  }
+
+  uint32_t fileSize = file.fileSize();
+  Serial.println("----------------------------------------");
+  Serial.print("File Path : "); Serial.println(filepath);
+  Serial.print("File Size : "); Serial.print(fileSize); Serial.println(" bytes");
+
+  // Check for ID3v2 header (first 10 bytes)
+  char header[10];
+  if (file.read((uint8_t*)header, 10) == 10) {
+    if (strncmp(header, "ID3", 3) == 0) {
+      Serial.print("Tag Format: ID3v2.");
+      Serial.print((int)header[3]);
+      Serial.print(".");
+      Serial.println((int)header[4]);
+    } else {
+      Serial.println("Tag Format: No ID3v2 header at file start");
+    }
+  }
+
+  // Check for ID3v1 footer (last 128 bytes)
+  if (fileSize >= 128) {
+    file.seekSet(fileSize - 128);
+    char footer[128];
+    if (file.read((uint8_t*)footer, 128) == 128) {
+      if (strncmp(footer, "TAG", 3) == 0) {
+        Serial.print("Title     : ");
+        for (int i = 3; i < 33 && footer[i] != 0; i++) Serial.print(footer[i]);
+        Serial.println();
+
+        Serial.print("Artist    : ");
+        for (int i = 33; i < 63 && footer[i] != 0; i++) Serial.print(footer[i]);
+        Serial.println();
+      } else {
+        Serial.println("ID3v1     : No ID3v1 footer found");
+      }
+    }
+  }
+
+  file.close();
+}
+
+void setup() {
+  Serial.begin(115200);
+  while (!Serial) {}
+
+  if (!sd.begin(CS_PIN, SPI_SPEED)) {
+    Serial.println("SD card initialization failed!");
+    return;
+  }
+
+  Serial.println("\n--- Current SD Card Directory ---");
+  sd.ls(LS_R | LS_SIZE);
+
+  Serial.println("\n--- Reading File Metadata ---");
+  for (int i = 1; i <= 4; i++) {
+    char path[32];
+    snprintf(path, sizeof(path), "dummy_mp3s/track0%d.mp3", i);
+    readRealMP3Metadata(path);
+  }
+}
+
+void loop() {
+}

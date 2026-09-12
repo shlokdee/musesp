@@ -1,0 +1,46 @@
+#include "SdFat.h"
+
+#define SPI_SPEED SD_SCK_MHZ(4)
+#define CS_PIN 10
+
+SdFat sd;
+SdFile file;
+
+void setup() {
+  Serial.begin(115200);
+
+  if (!sd.begin(CS_PIN, SPI_SPEED)) {
+    Serial.println("SD initialization failed!");
+    return;
+  }
+
+  // Open test.txt for writing (O_CREAT = create if missing, O_TRUNC = overwrite contents)
+  if (!file.open("test.txt", O_WRITE | O_CREAT | O_TRUNC)) {
+    Serial.println("Failed to open test.txt for writing!");
+    return;
+  }
+
+  // Write multiple lines of data
+  file.println("=== Wokwi SD Card Test File ===");
+  for (int i = 1; i <= 10; i++) {
+    file.print("Data Entry #");
+    file.print(i);
+    file.println(" -> Sensor reading: OK");
+  }
+  file.println("=== End of File ===");
+
+  // Close the file to flush data to virtual storage
+  file.close();
+  Serial.println("Data successfully written to test.txt!\n");
+
+  // Show directory listing
+  Serial.println("Files currently on card:");
+  sd.ls(LS_R | LS_SIZE);
+
+  // Read back the contents to confirm
+  Serial.println("\nReading test.txt contents back:");
+  
+}
+
+void loop() {
+}
