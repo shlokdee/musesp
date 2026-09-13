@@ -32,14 +32,21 @@ INR 2472 = 26 USD
 
 ---
 
-## Enclosure & Physical Validation Roadmap
+## Enclosure
 
-The enclosure will be 3D printed.
-To ensure all components fit properly, and im using the right components, i will be designing and printing the case after completing a breadboard prototype.
+The enclosure will be 3D printed. Also, this model is based on what models i find on the internet. Dimensions of various components may differ physically. This will be taken care of later.
+
+[Onshape Model](https://cad.onshape.com/documents/264e94d89a18f09f2a1ea4bf/w/94a54fd68cc89b6b12089792/e/665c9b9603db8db9ac692859)
+
+<img width="812" height="591" alt="image" src="https://github.com/user-attachments/assets/01f0d1b0-ac82-4ae6-bdb3-ddce01b34239" />
+
 
 ---
 <img width="947" height="528" alt="image" src="https://github.com/user-attachments/assets/f96f1859-548e-44a5-8ff3-06e661378bc4" />
-This is the basic layout, obviously subject to change after the first batch of hardware arrives and i actually tinker with it.
+
+Basic Layout, subject to change as per simulations...
+<img width="768" height="506" alt="image" src="https://github.com/user-attachments/assets/3248cff9-599a-45da-8b3e-f0ed27774831" />
+
 
 ## Milestones & Development Phases
 
