@@ -3,28 +3,21 @@ static const unsigned char PROGMEM fr[] = {0xc0,0x03,0xf8,0x03,0xfe,0x03,0xff,0x
 static const unsigned char PROGMEM fl[] = {0xc0,0x03,0xc0,0x1f,0xc0,0x7f,0xc1,0xff,0xc7,0xff,0xcf,0xff,0xdf,0xff,0xff,0xff,0xff,0xff,0xdf,0xff,0xcf,0xff,0xc7,0xff,0xc1,0xff,0xc0,0x7f,0xc0,0x1f,0xc0,0x03};
 
 static const unsigned char PROGMEM play[] = {0xc0,0x00,0xe0,0x00,0xf8,0x00,0xff,0x00,0xff,0xc0,0xff,0xe0,0xff,0xf8,0xff,0xff,0xff,0xff,0xff,0xf8,0xff,0xe0,0xff,0xc0,0xff,0x00,0xf8,0x00,0xe0,0x00,0xc0,0x00};
-int seeklen=0;
-void drawScreen_landscape(Adafruit_ILI9341 tft, String title, String artist) {
+
+static const unsigned char PROGMEM pausebtn[] = {0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0,0xe0};
+void drawScreen_landscape(Adafruit_ILI9341 &tft) {
     tft.setRotation(1);
     tft.fillScreen(0x0);
     // rect 1
     tft.drawRect(20, 20, 140, 140, 0xFFFF);
     // string 2
-    tft.setTextColor(0xFFFF);
-    tft.setTextSize(2);
-    tft.setTextWrap(false);
-    tft.setCursor(20, 186);
-    tft.print(title);
-    // string 3
-    tft.setTextSize(1);
-    tft.setCursor(25, 213);
-    tft.print(artist);
+
     // paint 5
     tft.drawBitmap(208, 209, fl, 16, 16, 0xFFFF);
     // paint 5
     tft.drawBitmap(275, 209, fr, 16, 16, 0xFFFF);
     // paint 7
-    tft.drawBitmap(242, 209, play, 16, 16, 0xFFFF);
+    tft.drawBitmap(242, 209, pausebtn, 16, 16, 0xFFFF);
     // rect 8
     tft.drawRect(200, 186, 100, 15, 0xFFFF);
     // rect 9
@@ -43,4 +36,27 @@ void drawScreen_landscape(Adafruit_ILI9341 tft, String title, String artist) {
     tft.drawLine(200, 120, 299, 120, 0xFFFF);
     // line 11
     tft.drawLine(200, 140, 299, 140, 0xFFFF);
+}
+
+void drawText_landscape(Adafruit_ILI9341 &tft, String title, String artist) {
+    tft.fillRect(20,186, 160, 40, 0x0);
+    tft.fillRect(202, 188, 100, 11, 0x0);
+    tft.setTextColor(0xFFFF);
+    tft.setTextSize(2);
+    tft.setTextWrap(true);
+    tft.setCursor(20, 186);
+    tft.print(title);
+    tft.setTextSize(1);
+    tft.setCursor(25, 213);
+    tft.print(artist);
+}
+
+void drawPause_landscape(Adafruit_ILI9341 &tft, bool paused) {
+    tft.fillRect(242, 209, 16, 16, 0x0);
+    if (paused) {
+        tft.drawBitmap(242, 209, play, 16, 16, 0xFFFF);
+    } else {
+        
+        tft.drawBitmap(242, 209, pausebtn, 16, 16, 0xFFFF);
+    }
 }
