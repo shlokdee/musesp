@@ -10,6 +10,9 @@ created_at: "2026-09-10"
 
 I accidentally deleted the project on forge, i wanted to delete the other one. But still i had taken backup of the journal, so restored it. 
 
+<img width="892" height="506" alt="image" src="https://github.com/user-attachments/assets/3582880d-48b9-4d62-9420-5ca905056c5f" />
+
+
 # 2026-09-14: Coded a bit more
 
 **Total time spent: 1 hour 30 mins**
