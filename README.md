@@ -37,22 +37,22 @@ INR 2472 = 26 USD
 The enclosure will be 3D printed. Also, this model is based on what models i find on the internet. Dimensions of various components may differ physically. This will be taken care of later.
 
 [Onshape Model](https://cad.onshape.com/documents/264e94d89a18f09f2a1ea4bf/w/94a54fd68cc89b6b12089792/e/665c9b9603db8db9ac692859)
-
-<img width="812" height="591" alt="image" src="https://github.com/user-attachments/assets/01f0d1b0-ac82-4ae6-bdb3-ddce01b34239" />
-
+<img width="892" height="506" alt="Screenshot From 2026-09-16 11-54-38" src="https://github.com/user-attachments/assets/8a6ace81-de95-477f-84b4-d88aa8457b85" />
 
 ---
-<img width="947" height="528" alt="image" src="https://github.com/user-attachments/assets/f96f1859-548e-44a5-8ff3-06e661378bc4" />
+## Schematic
 
-Basic Layout, subject to change as per simulations...
+<img width="993" height="565" alt="image" src="https://github.com/user-attachments/assets/061fc45d-5313-462a-b8ad-6a1b7ba0a507" />
+(sd card reader is included in the back of the devboard im using, so no connections for that...)
+
 <img width="768" height="506" alt="image" src="https://github.com/user-attachments/assets/3248cff9-599a-45da-8b3e-f0ed27774831" />
 
+## Steps to Build:
 
-## Milestones & Development Phases
-
-- [x] Hardware architecture & power budget calculation
-- [x] Pin mapping & CAD modeling phase
-- [ ] Breadboard prototype & signal noise floor analysis
-- [ ] Custom PCB layout / perfboard component mounting
-- [ ] Enclosure print, mechanical assembly, and integration
-- [ ] Final firmware release & public repository publication
+1. Connect the components using the schematic
+2. 3d Print the enclosure
+3. Aligh the items using the onshape model given
+4. Use 3 10 mm m3 screws to secure the back plate, and 1 3 mm m3 screw to secure the last hole on the display
+5. Put the sd card with all your mp3 files
+6. Flash the firmware from the platformio project
+7. Youre done!!!
