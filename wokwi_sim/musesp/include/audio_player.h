@@ -10,7 +10,7 @@ Audio audio;
 
 void setupAudio() {
 audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
-audio.setVolume(15);   // range is 0-21, not 0-100
+audio.setVolume(15);
 }
 
 void playSong(String filename) {
