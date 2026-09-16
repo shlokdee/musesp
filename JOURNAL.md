@@ -5,6 +5,29 @@ description: "An audiophile digital audio player made with esp 32"
 created_at: "2026-09-10"
 ---
 
+# 2026-09-16: Completed the Design
+**Total time spent: 30 mins** 
+[Lapse Link](https://lapse.hackclub.com/timelapse/JOr6y3ShN6ii)
+
+Finally completed the case design for the musesp...
+### Designed the buttons
+![](https://cdn.hackclub.com/01a0a8e8-00b9-77b5-a397-643af5c49eca/journal-1789540171621.png)
+Designed the buttons and placed them in the assembly...
+![](https://cdn.hackclub.com/01a0a8e8-9c45-7561-b6cd-f60a69605118/journal-1789540211382.png)
+The button mounting is going to work as follows:
+I will solder the buttons on a perf board and cut the perf board acc to the right dimensions. Then ill screw in the perf board in the holes on the front plate. Also, ill use a bigger screw, that goes through the backplate too, so that all of them are secured...
+
+![](https://cdn.hackclub.com/01a0a8ea-4180-71f0-9592-4e20462797b5/journal-1789540319214.png)
+Thats what i did next. Added screw holes to the back plate and aligned them properly
+
+![](https://cdn.hackclub.com/01a0a8eb-4cfa-7bab-a636-e850e6455e0d/journal-1789540387555.png)
+![](https://cdn.hackclub.com/01a0a8eb-5a2e-7bee-b560-19f9cc758a54/journal-1789540391328.png)
+
+And voila! The case is designed!!!
+
+Next steps: Ship somewhere!!!
+
+
 # 2026-09-14: Coded a bit more
 
 **Total time spent: 1 hour 30 mins**
@@ -33,6 +56,7 @@ Also this delay thing wont work, as ill have to run other processes (like audio 
 # 2026-09-13: Designed the case even better
 
 **Total time spent: 1 hour**
+[Lapse Link](https://lapse.hackclub.com/timelapse/mgQHt819XnAD)
 
 I solved the fitting problem of the electronics components. I made a thick back plate, and then extrude cut the outlines of the boards... so that they sit into the surface... 
 ![image.png](https://cdn.hackclub.com/01a09a44-eddd-750c-877e-83f0c453b9c3/image.png)
@@ -57,6 +81,7 @@ The whole body is prolly too thick too, ill reduce the thickness for sure...
 # 2026-09-13: Started designing the case
 
 **Total time spent: 1 hour**
+[Lapse Link](https://lapse.hackclub.com/timelapse/2ntoext6Lj6C)
 
 I first tried to use fusion 360, but my laptop is slow as hell, so i switched to onshape...
 
@@ -105,6 +130,7 @@ the sd was initialising, but file reading was not working....
 # 2026-09-12: Designed the UI
 
 **Total time spent: 1 hour**
+[Lapse Link](https://lapse.hackclub.com/timelapse/PfEjHNs3jHrg)
 
 I found this UI builder called lopaka
 ![image.png](https://cdn.hackclub.com/01a094d5-4151-7157-a947-2bf26dcd296b/image.png)
@@ -116,6 +142,7 @@ Then i simulated it in wokwi, altering the lopaka code, and built a moving seeki
 # 2026-09-12: Simulated a very small part of the firmware
 
 **Total time spent: 1.5 hours**
+[Lapse Link](https://lapse.hackclub.com/timelapse/m9FCerOfpstV)
 
 I thought Firmware design would be a piece of cake, ill just stitch together code from various sources and ill be done in a few hours...
 but 1.5 hours in, im just done with displaying a small image from the sd to the display :cry:
@@ -167,6 +194,7 @@ I also completed the bom for the first phase, with battery and charger. it comes
 # 2026-09-10: Figured out the connections for the main 3 modules
 
 **Total time spent: 1 hour**
+[Lapse Link](https://lapse.hackclub.com/timelapse/I4MPxc_vWduY)
 
 I looked around on the internet, read the seller specifications and laid out the basic connections for the 3 modules. The s3 variant of esp32 gave me a hard time. This is subject to change, as most of the reiterations on the hardware side is going to happen only after i receive the components. After that, i can actually test out the stuff and make changes. The schematic i made is kinda speculative, as most of the connections were for esp 32 and not s3. 
 ![image.png](https://cdn.hackclub.com/01a08b19-79aa-7c0e-a833-280361addf81/image.png)
