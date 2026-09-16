@@ -4,6 +4,11 @@ author: "f20260342"
 description: "An audiophile digital audio player made with esp 32"
 created_at: "2026-09-10"
 ---
+# 2026-09-16: Accidentally deleted the project
+
+**Total time spent: 0 hours**
+
+I accidentally deleted the project on forge, i wanted to delete the other one. But still i had taken backup of the journal, so restored it. 
 
 # 2026-09-14: Coded a bit more
 
