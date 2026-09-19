@@ -25,10 +25,11 @@
 | **2 PIN WHITE TACT SWITCH C0402** | Switches for navigation and media controls (Play/Pause, Next, Prev, Vol+, Vol-). | 5 | ₹3 | ₹15 | [Robu.in Link](https://robu.in/product/2-pin-white-tact-switch-c0402/) |
 | **NOVA 105050 3000mAh 3.7V LiPo Battery** | Single-cell 3.7V LiPo with onboard PCB protection. Delivers ~10–12 hours of continuous playback. | 1 | ₹469 | ₹469 | [Robu.in Link](https://robu.in/product/nova-105050-3000mah-3-7v-micro-lipo-battery-pack/) |
 | **TP4056 1A Li-Ion Charger (Mini USB)** | Onboard 1A linear charging module with DW01 IC for over-charge, over-discharge, and short-circuit protection. | 1 | ₹38 | ₹38 | [Robu.in Link](https://robu.in/product/tp4056-1a-li-ion-lithium-battery-charging-module-with-current-protection-mini-usb/) |
-| **SPDT Mini Slide Switch** | Physical hard toggle switch between battery positive rail and boost converter for total system shutdown. | 1 | ₹12 | ₹12 | [Robu.in Link](https://robu.in/product-tag/slide-switch/) |
-| **Total Hardware Cost** | **Complete Portable Hi-Fi Player Hardware BOM** | 11 | — | **₹2472** | — |
+| **SPDT Mini Slide Switch** | Physical hard toggle switch  | 1 | ₹12 | ₹12 | [Robu.in Link](https://robu.in/product-tag/slide-switch/) |
+| **3D print** |-|-|₹500|₹500|Robu service|
+| **Total Hardware Cost** | **Complete Portable Hi-Fi Player Hardware BOM** | - | — | **₹2972** | — |
 
-INR 2472 = 26 USD
+31 USD
 
 ---
 
